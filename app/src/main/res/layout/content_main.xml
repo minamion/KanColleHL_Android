@@ -26,14 +26,14 @@
             android:layout_marginBottom="5dp"
             android:typeface="normal" />
         <!--<TextView-->
-            <!--android:gravity="center"-->
-            <!--android:layout_width="fill_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:id="@+id/text233"-->
-            <!--android:hint="玄不救非氪不改命~"-->
-            <!--android:textSize="20dp"-->
-            <!--android:layout_marginBottom="5dp"-->
-            <!--android:typeface="normal" />-->
+        <!--android:gravity="center"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/text233"-->
+        <!--android:hint="玄不救非氪不改命~"-->
+        <!--android:textSize="20dp"-->
+        <!--android:layout_marginBottom="5dp"-->
+        <!--android:typeface="normal" />-->
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -45,93 +45,93 @@
 
             <LinearLayout
 
-    android:id="@+id/good_ll"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="horizontal"
-    android:layout_weight="0.5"
-    >
-    <LinearLayout
-        android:id="@+id/llg1"
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:background="#ffee44"
-        android:layout_weight="1.2">
-        <TextView
-            android:gravity="center"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/good1"
-            android:hint="宜"
-            android:textSize="40dp"
-            android:layout_marginBottom="5dp"
-            android:typeface="normal"
-            android:textColor="#FFFFFF"
-            android:layout_gravity="center"
-            android:textIsSelectable="false" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/llg2"
-        android:background="#ffffaa"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="0.3">
-        <ListView
-            android:id="@+id/list_good"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            ></ListView>
-    </LinearLayout>
-</LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/bad_ll"
-        android:layout_width="fill_parent"
-
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="0.5"
-        >
-        <LinearLayout
-            android:id="@+id/llb1"
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:background="#ff4444"
-            android:layout_weight="1.2">
-            <TextView
-                android:gravity="center"
+                android:id="@+id/good_ll"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/bad1"
-                android:hint="不宜"
-                android:textColor="#FFFFFF"
-                android:textSize="40dp"
-                android:layout_marginBottom="5dp"
-                android:typeface="normal"
-                android:layout_gravity="center" />
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="0.5"
+                >
+                <LinearLayout
+                    android:id="@+id/llg1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffee44"
+                    android:layout_weight="1.2">
+                    <TextView
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/good1"
+                        android:hint="宜"
+                        android:textSize="40dp"
+                        android:layout_marginBottom="5dp"
+                        android:typeface="normal"
+                        android:textColor="#FFFFFF"
+                        android:layout_gravity="center"
+                        android:textIsSelectable="false" />
 
-        <LinearLayout
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llg2"
+                    android:background="#ffffaa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="0.3">
+                    <ListView
+                        android:id="@+id/list_good"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        ></ListView>
+                </LinearLayout>
+            </LinearLayout>
 
-            android:id="@+id/llb2"
-            android:background="#ffddd3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_weight="0.3">
-            <ListView
-                android:id="@+id/list_bad"
+            <LinearLayout
+                android:id="@+id/bad_ll"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                ></ListView>
 
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="0.5"
+                >
+                <LinearLayout
+                    android:id="@+id/llb1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="#ff4444"
+                    android:layout_weight="1.2">
+                    <TextView
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bad1"
+                        android:hint="不宜"
+                        android:textColor="#FFFFFF"
+                        android:textSize="40dp"
+                        android:layout_marginBottom="5dp"
+                        android:typeface="normal"
+                        android:layout_gravity="center" />
+                </LinearLayout>
 
-    </LinearLayout>
+                <LinearLayout
+
+                    android:id="@+id/llb2"
+                    android:background="#ffddd3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="0.3">
+                    <ListView
+                        android:id="@+id/list_bad"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        ></ListView>
+
+                </LinearLayout>
+
+            </LinearLayout>
             <TextView
                 android:layout_marginTop="20dp"
                 android:layout_width="fill_parent"

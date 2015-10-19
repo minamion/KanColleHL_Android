@@ -6,10 +6,10 @@ android {
 
     defaultConfig {
         applicationId "com.minamion.kancollehl_android"
-        minSdkVersion 16
+        minSdkVersion 9
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 4
+        versionName "试制乙型(0.2.0-Alpha)"
     }
     buildTypes {
         release {

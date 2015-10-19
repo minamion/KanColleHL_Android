@@ -2,6 +2,7 @@ package com.minamion.kancollehl_android;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -47,8 +48,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         change_date();
@@ -82,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
 
         if (id == R.id.action_settings) {
+
             // 创建退出对话框
 
             AlertDialog isExit = new AlertDialog.Builder(this).create();
@@ -96,9 +103,17 @@ public class MainActivity extends AppCompatActivity {
             isExit.show();
             return true;
         }
-
+        else{
+            if (id == R.id.action_update) {
+                UpdateManager manager = new UpdateManager(MainActivity.this);
+                // 檢查軟件更新
+                manager.checkUpdate();
+                return true;
+            }
+        }
         return super.onOptionsItemSelected(item);
     }
+
 
     public void change_date() {
 
@@ -253,8 +268,10 @@ public class MainActivity extends AppCompatActivity {
         String[] list_g;
         String[] list_b;
         ArrayAdapter<String> listAdapter;
-        int numGood = random(iday, 99) % 3 + 2; //good 数量
-        int numBad = random(iday, 89) % 3 + 2; // bad数量
+//        int numGood = random(iday, 99) % 3 + 2; //good 数量
+//        int numBad = random(iday, 89) % 3 + 2; // bad数量
+        int numGood = 4; //good 数量
+        int numBad = 4; // bad数量
         int randNum = random(iday, 2);//产生伪随机数
         int randNum1 = random(iday, 3);
 //        int numGood = random(mDay, 98) % 3 + 2;
