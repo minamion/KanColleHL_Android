@@ -1,6 +1,8 @@
 package com.minamion.kancollehl_android;
 
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.AlertDialog;
@@ -22,6 +24,7 @@ import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
+    String versionName ="";
     Calendar c = Calendar.getInstance();
     String mYear = String.valueOf(c.get(Calendar.YEAR)); // 获取当前年份
     String mMonth = String.valueOf(c.get(Calendar.MONTH) + 1);// 获取当前月份
@@ -78,6 +81,25 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+
+    /**
+     * 获取软件版本号
+     */
+    private String getVersionName(Context context) {
+
+        try {
+
+            // 获取软件版本号，对应AndroidManifest.xml下android:versionCode
+            versionName = context.getPackageManager().getPackageInfo("com.minamion.kancollehl_android", 0).versionName;
+            Log.e("MainActivity", "++++++获取本地版本号++++++" + versionName);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+            Log.e("MainActivity", "++++++未获取到本地版本号++++++");
+        }
+        return  versionName;
+    }
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -95,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
             // 设置对话框标题
             isExit.setTitle("关于:");
             // 设置对话框消息
-            isExit.setMessage("本老黄历修改自 + Yiding He 的 程序员老黄历 ,\n在此表示感谢\n本老黄历仅面向水深火热中的舰娘玩家\n本老黄历基于玄学生成，玄学游戏只能靠玄学去击败！");
+            isExit.setMessage("舰娘老黄历 " + getVersionName(this)+"\n本老黄历修改自 + Yiding He 的 程序员老黄历 ,\n在此表示感谢\n本老黄历仅面向水深火热中的舰娘玩家\n本老黄历基于玄学生成，玄学游戏只能靠玄学去击败！");
             // 添加选择按钮并注册监听
 
             isExit.setButton(-2, "确定", listener);

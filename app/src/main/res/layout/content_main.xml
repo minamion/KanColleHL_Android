@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginBottom="50dp">
+        android:layout_marginBottom="40dp">
         <TextView
             android:gravity="center"
             android:layout_width="fill_parent"
@@ -23,7 +23,7 @@
             android:id="@+id/date"
             android:hint="今天是XXXX年XX月XX日 星期X"
             android:textSize="20dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="2dp"
             android:typeface="normal" />
         <!--<TextView-->
         <!--android:gravity="center"-->
@@ -39,7 +39,7 @@
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_marginBottom="15dp">
+            android:layout_marginBottom="5dp">
 
 
 
@@ -49,14 +49,14 @@
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:layout_weight="0.5"
+                android:layout_weight="0.8"
                 >
                 <LinearLayout
                     android:id="@+id/llg1"
                     android:layout_width="fill_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:background="#ffee44"
+                    android:background="#FFEB3B"
                     android:layout_weight="1.2">
                     <TextView
                         android:gravity="center"
@@ -74,7 +74,7 @@
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/llg2"
-                    android:background="#ffffaa"
+                    android:background="#FFF9C4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -93,14 +93,14 @@
 
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:layout_weight="0.5"
+                android:layout_weight="0.8"
                 >
                 <LinearLayout
                     android:id="@+id/llb1"
                     android:layout_width="fill_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:background="#ff4444"
+                    android:background="#F44336"
                     android:layout_weight="1.2">
                     <TextView
                         android:gravity="center"
@@ -118,7 +118,7 @@
                 <LinearLayout
 
                     android:id="@+id/llb2"
-                    android:background="#ffddd3"
+                    android:background="#FFCDD2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -133,7 +133,7 @@
 
             </LinearLayout>
             <TextView
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView1"

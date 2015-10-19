@@ -40,6 +40,11 @@ public class ParseXmlService
                 {
                     hashMap.put("version",childElement.getFirstChild().getNodeValue());
                 }
+                //更新内容
+                if ("change".equals(childElement.getNodeName()))
+                {
+                    hashMap.put("change",childElement.getFirstChild().getNodeValue());
+                }
                 //软件名称
                 else if (("name".equals(childElement.getNodeName())))
                 {

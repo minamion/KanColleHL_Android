@@ -15151,17 +15151,19 @@ android.support.v7.widget.ViewInfoStore$ProcessCallback -> android.support.v7.wi
     void processPersistent(android.support.v7.widget.RecyclerView$ViewHolder,android.support.v7.widget.RecyclerView$ItemAnimator$ItemHolderInfo,android.support.v7.widget.RecyclerView$ItemAnimator$ItemHolderInfo) -> c
     void unused(android.support.v7.widget.RecyclerView$ViewHolder) -> a
 com.minamion.kancollehl_android.MainActivity -> com.minamion.kancollehl_android.MainActivity:
-    java.util.Calendar c -> i
-    java.lang.String mYear -> j
-    java.lang.String mMonth -> k
-    java.lang.String mDay -> l
-    java.lang.String mWay -> m
-    int iday -> n
-    android.content.DialogInterface$OnClickListener listener -> o
-    java.util.List data -> p
+    java.lang.String versionName -> i
+    java.util.Calendar c -> j
+    java.lang.String mYear -> k
+    java.lang.String mMonth -> l
+    java.lang.String mDay -> m
+    java.lang.String mWay -> n
+    int iday -> o
+    android.content.DialogInterface$OnClickListener listener -> p
+    java.util.List data -> q
     void <init>() -> <init>
     void onCreate(android.os.Bundle) -> onCreate
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    java.lang.String getVersionName(android.content.Context) -> a
     boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
     void change_date() -> j
     int random(int,int) -> a
@@ -15181,14 +15183,15 @@ com.minamion.kancollehl_android.UpdateManager -> com.minamion.kancollehl_android
     java.lang.String versionName -> b
     int serviceCode -> c
     java.lang.String serviceName -> d
-    java.util.HashMap mHashMap -> e
-    java.lang.String mSavePath -> f
-    int progress -> g
-    boolean cancelUpdate -> h
-    android.content.Context mContext -> i
-    android.widget.ProgressBar mProgress -> j
-    android.app.Dialog mDownloadDialog -> k
-    android.os.Handler mHandler -> l
+    java.lang.String change -> e
+    java.util.HashMap mHashMap -> f
+    java.lang.String mSavePath -> g
+    int progress -> h
+    boolean cancelUpdate -> i
+    android.content.Context mContext -> j
+    android.widget.ProgressBar mProgress -> k
+    android.app.Dialog mDownloadDialog -> l
+    android.os.Handler mHandler -> m
     void <init>(android.content.Context) -> <init>
     void checkUpdate() -> a
     boolean isUpdate() -> b
@@ -15230,3 +15233,10 @@ com.minamion.kancollehl_android.UpdateManager$downloadApkThread -> com.minamion.
     void <init>(com.minamion.kancollehl_android.UpdateManager) -> <init>
     void run() -> run
     void <init>(com.minamion.kancollehl_android.UpdateManager,com.minamion.kancollehl_android.UpdateManager$1) -> <init>
+com.minamion.kancollehl_android.Welcome -> com.minamion.kancollehl_android.Welcome:
+    void <init>() -> <init>
+    void onCreate(android.os.Bundle) -> onCreate
+com.minamion.kancollehl_android.Welcome$1 -> com.minamion.kancollehl_android.i:
+    com.minamion.kancollehl_android.Welcome this$0 -> a
+    void <init>(com.minamion.kancollehl_android.Welcome) -> <init>
+    void run() -> run

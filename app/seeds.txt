@@ -4339,6 +4339,7 @@ com.minamion.kancollehl_android.R$id: int up
 com.minamion.kancollehl_android.R$id: int update_progress
 com.minamion.kancollehl_android.R$id: int useLogo
 com.minamion.kancollehl_android.R$id: int view_offset_helper
+com.minamion.kancollehl_android.R$id: int welcome
 com.minamion.kancollehl_android.R$id: int withText
 com.minamion.kancollehl_android.R$id: int wrap_content
 com.minamion.kancollehl_android.R$integer: int abc_config_activityDefaultDur
@@ -4400,8 +4401,10 @@ com.minamion.kancollehl_android.R$layout: int select_dialog_multichoice_material
 com.minamion.kancollehl_android.R$layout: int select_dialog_singlechoice_material
 com.minamion.kancollehl_android.R$layout: int softupdate_progress
 com.minamion.kancollehl_android.R$layout: int support_simple_spinner_dropdown_item
+com.minamion.kancollehl_android.R$layout: int welcome
 com.minamion.kancollehl_android.R$menu: int menu_main
 com.minamion.kancollehl_android.R$mipmap: int ic_launcher
+com.minamion.kancollehl_android.R$mipmap: int logo
 com.minamion.kancollehl_android.R$string: int abc_action_bar_home_description
 com.minamion.kancollehl_android.R$string: int abc_action_bar_home_description_format
 com.minamion.kancollehl_android.R$string: int abc_action_bar_home_subtitle_description_format
@@ -5182,3 +5185,5 @@ com.minamion.kancollehl_android.R$styleable: int[] ViewStubCompat
 com.minamion.kancollehl_android.R$styleable: int ViewStubCompat_android_id
 com.minamion.kancollehl_android.R$styleable: int ViewStubCompat_android_inflatedId
 com.minamion.kancollehl_android.R$styleable: int ViewStubCompat_android_layout
+com.minamion.kancollehl_android.Welcome
+com.minamion.kancollehl_android.Welcome: Welcome()

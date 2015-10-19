@@ -3,10 +3,10 @@
     <string name="action_settings">关于</string>
     <string name="soft_update_title">版本更新</string>
     <string name="soft_update_info">侦测到新版本，是否更新</string>
-    <string name="soft_update_updatebtn">更新！</string>
-    <string name="soft_update_later">等等吧</string>
+    <string name="soft_update_updatebtn">立刻更新！</string>
+    <string name="soft_update_later">再等等吧~</string>
     <string name="soft_updating">更新中~</string>
     <string name="soft_update_cancel">取消更新</string>
-    <string name="soft_update_no">取消下载</string>
+    <string name="soft_update_no">未发现新版本</string>
     <string name="action_update">检查更新</string>
 </resources>

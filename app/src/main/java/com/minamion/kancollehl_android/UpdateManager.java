@@ -32,6 +32,7 @@ public class UpdateManager
     String versionName ="";
     int serviceCode =0;
     String serviceName ="";
+    String change ="";
     /* 下载中 */
     private static final int DOWNLOAD = 1;
     /* 下载结束 */
@@ -101,9 +102,6 @@ public class UpdateManager
         // 获取当前软件版本
         versionCode = getVersionCode(mContext);
         versionName= getVersionName(mContext);
-        // 把version.xml放到网络上，然后获取文件信息
-        //InputStream inStream = ParseXmlService.class.getClassLoader().getResourceAsStream("version.xml");
-        // 解析XML文件。 由于XML文件比较小，因此使用DOM方式进行解析
         ParseXmlService service = new ParseXmlService();
         try
         {
@@ -122,7 +120,7 @@ public class UpdateManager
         {
             Log.e("MainActivity", "++++++获取XML++++++" +  mHashMap);
             serviceName= mHashMap.get("name").toString();
-
+            change= mHashMap.get("change").toString();
             serviceCode = Integer.valueOf(mHashMap.get("version"));
 
             Log.e("MainActivity", "++++++获取远程版本号++++++" + serviceCode);
@@ -178,7 +176,7 @@ public class UpdateManager
         // 构造对话框
         Builder builder = new Builder(mContext);
         builder.setTitle(R.string.soft_update_title);
-        builder.setMessage("有新版本可用" + "\n当前版本：" + versionName + "\n新版本：" + serviceName);
+        builder.setMessage("有新版本可用" + "\n当前版本：" + versionName + "\n新版本：" + serviceName + "\n更新内容：" + change);
         // 更新
         builder.setPositiveButton(R.string.soft_update_updatebtn, new OnClickListener() {
             @Override
@@ -276,7 +274,7 @@ public class UpdateManager
                     {
                         file.mkdir();
                     }
-                    File apkFile = new File(mSavePath, mHashMap.get("name"));
+                    File apkFile = new File(mSavePath, mHashMap.get("name")+".apk");
                     FileOutputStream fos = new FileOutputStream(apkFile);
                     int count = 0;
                     // 缓存
@@ -319,13 +317,14 @@ public class UpdateManager
      */
     private void installApk()
     {
-        File apkfile = new File(mSavePath, mHashMap.get("name"));
+        File apkfile = new File(mSavePath, mHashMap.get("name")+".apk");
         if (!apkfile.exists())
         {
             return;
         }
         // 通过Intent安装APK文件
         Intent i = new Intent(Intent.ACTION_VIEW);
+        Toast.makeText(mContext, "开始安装更新", Toast.LENGTH_LONG).show();
         i.setDataAndType(Uri.parse("file://" + apkfile.toString()), "application/vnd.android.package-archive");
         mContext.startActivity(i);
     }
