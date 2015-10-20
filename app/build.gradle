@@ -8,8 +8,8 @@ android {
         applicationId "com.minamion.kancollehl_android"
         minSdkVersion 9
         targetSdkVersion 23
-        versionCode 8
-        versionName "试制乙型改三甲(0.2.3.1-Alpha)"
+        versionCode 9
+        versionName "0.2.3.2-Alpha"
     }
     buildTypes {
         release {

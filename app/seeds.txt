@@ -4427,6 +4427,7 @@ com.minamion.kancollehl_android.R$string: int abc_toolbar_collapse_description
 com.minamion.kancollehl_android.R$string: int action_settings
 com.minamion.kancollehl_android.R$string: int action_update
 com.minamion.kancollehl_android.R$string: int app_name
+com.minamion.kancollehl_android.R$string: int app_versionname
 com.minamion.kancollehl_android.R$string: int appbar_scrolling_view_behavior
 com.minamion.kancollehl_android.R$string: int character_counter_pattern
 com.minamion.kancollehl_android.R$string: int soft_update_cancel

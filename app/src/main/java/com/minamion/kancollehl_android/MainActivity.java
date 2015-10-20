@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-    String versionName ="";
+    String versionName = "";
     Calendar c = Calendar.getInstance();
     String mYear = String.valueOf(c.get(Calendar.YEAR)); // 获取当前年份
     String mMonth = String.valueOf(c.get(Calendar.MONTH) + 1);// 获取当前月份
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
             Log.e("MainActivity", "++++++未获取到本地版本号++++++");
         }
-        return  versionName;
+        return versionName;
     }
 
 
@@ -106,26 +106,20 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so lon
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
-
         if (id == R.id.action_settings) {
-
             // 创建退出对话框
-
             AlertDialog isExit = new AlertDialog.Builder(this).create();
             // 设置对话框标题
             isExit.setTitle("关于:");
             // 设置对话框消息
-            isExit.setMessage("舰娘老黄历 " + getVersionName(this)+"\n本老黄历修改自 + Yiding He 的 程序员老黄历 ,\n在此表示感谢\n本老黄历仅面向水深火热中的舰娘玩家\n本老黄历基于玄学生成，玄学游戏只能靠玄学去击败！");
+            isExit.setMessage("舰娘老黄历 " + getVersionName(this) + "\n本老黄历修改自 + Yiding He 的 程序员老黄历 ,\n在此表示感谢\n本老黄历仅面向水深火热中的舰娘玩家\n本老黄历基于玄学生成，玄学游戏只能靠玄学去击败！");
             // 添加选择按钮并注册监听
-
             isExit.setButton(-2, "确定", listener);
             // 显示对话框
             isExit.show();
             return true;
-        }
-        else{
+        } else {
             if (id == R.id.action_update) {
                 UpdateManager manager = new UpdateManager(MainActivity.this);
                 // 檢查軟件更新
@@ -135,7 +129,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 
     public void change_date() {
 
@@ -174,14 +167,11 @@ public class MainActivity extends AppCompatActivity {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             finish();
         }
-
         return false;
-
     }
 
     private String CVrecipe(int num) {
         Calendar c = Calendar.getInstance();
-
         String result1;
         int r1;
         int r2;
@@ -264,7 +254,6 @@ public class MainActivity extends AppCompatActivity {
                 r4 = 3000;
                 break;
         }
-
         int zc = random(iday, 7) % 10 + 1;
         int zc2 = 1;
         if ((zc <= 4) && (zc > 0)) {
@@ -274,7 +263,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             zc2 = 100;
         }
-
         r1 = r1 + random(iday, 73) % 49 * 10;
         r2 = r2 + random(iday, 61) % 49 * 10;
         r3 = r3 + random(iday, 59) % 49 * 10;
@@ -303,7 +291,7 @@ public class MainActivity extends AppCompatActivity {
         if ((mWay == 1) || (mWay == 7)) {    //判断周末
             p = 0;
         }
-        String[] tools = {"Chrome玩舰娘", "IE玩舰娘", "Firefox玩舰娘", "Opera玩舰娘" , "平板玩舰娘", "手机玩舰娘"};
+        String[] tools = {"Chrome玩舰娘", "IE玩舰娘", "Firefox玩舰娘", "Opera玩舰娘", "平板玩舰娘", "手机玩舰娘"};
         String[] directions = {"北方", "东北方", "东方", "东南方", "南方", "西南方", "西方", "西北方", "天上", "地板"};
         String[] drinks = {"驱逐舰", "轻巡洋舰", "重巡洋舰", "战列巡洋舰", "战列舰", "轻空母", "航空母舰", "潜水艇", "扬陆舰", "重雷装巡洋舰", "航空巡洋舰", "航空战列舰", "水上机母舰", "装甲空母", "潜水空母", "训练巡洋舰", "工作舰"};
         String[][] activities = {
@@ -332,16 +320,11 @@ public class MainActivity extends AppCompatActivity {
                 {"批量拆船", "哐哐哐，2411到手！", "舰娘权益维护组织发起抗议！"},
                 {"上G+舰娘社群", "今天的社群消息不能错过！", "今天的舰娘社群闪瞎眼球…"},
                 {"改修装备", "赞，一口气上5星，不费劲！", "改修失败……"},};
-
-
 //        String[] values = new String[numGood - 1];
 //        for (int i = 0; i < numGood; i++) {
 //            values[i] = activities[randNum1 % 17 - i][0];
 //        }
-
         // Log.e("MainActivity", "++++++启动反选择++++++" + MainActivity.setIsSelected());
-
-
         String a1 = "";
         String[] b1 = new String[17];
         String b2 = "";
@@ -354,9 +337,9 @@ public class MainActivity extends AppCompatActivity {
             b1[i] = (drinks[i]);
         }
         for (int j = 0; j < 2; j++) {
-            int index = random(iday, j) % 17-2;
-            if (index<0)
-                index=-index;
+            int index = random(iday, j) % 17 - 2;
+            if (index < 0)
+                index = -index;
             b1[index] = "";
         }
         for (int i = 0; i < 2; i++) {
@@ -367,7 +350,6 @@ public class MainActivity extends AppCompatActivity {
         TextView text_date2 = (TextView) findViewById(R.id.textView2);
         TextView text_date3 = (TextView) findViewById(R.id.textView3);
         TextView text_date4 = (TextView) findViewById(R.id.textView4);
-
         text_date1.setText("座位朝向：面向 " + c1 + " 赌船赌装备，脸最好。");
         text_date2.setText("推荐旗舰：" + b2);
         text_date3.setText("推图指数：" + a1);
@@ -376,27 +358,25 @@ public class MainActivity extends AppCompatActivity {
         text_date4.setText("玄学公式：" + "\n战舰:" + result1 + "\n空母:" + result2);
         final ArrayList<HashMap<String, Object>> listItem_g = new ArrayList<HashMap<String, Object>>();
         final ArrayList<HashMap<String, Object>> listItem_b = new ArrayList<HashMap<String, Object>>();
-        int[] RANK=new int[(numGood+numBad)];
-        for(int i=0;i<(numGood+numBad);i++){
-            RANK[i]= random(iday, 99)%25+i;
+        int[] RANK = new int[(numGood + numBad)];
+        for (int i = 0; i < (numGood + numBad); i++) {
+            RANK[i] = random(iday, 99) % 25 + i;
         }
-        for(int i=0;i<numGood;i++){
+        for (int i = 0; i < numGood; i++) {
             Log.e("MyAdapter", "--------RANK为:" + RANK[i] + "-------");
 
             final HashMap<String, Object> map = new HashMap<String, Object>();
-            map.put("ItemTitle",(activities[RANK[i]-2][0]) );
-            map.put("ItemText",(activities[RANK[i]-2][1]) );
+            map.put("ItemTitle", (activities[RANK[i] - 2][0]));
+            map.put("ItemText", (activities[RANK[i] - 2][1]));
             listItem_g.add(map);
-
         }
-        for(int i=numGood;i<(numGood+numBad);i++){
+        for (int i = numGood; i < (numGood + numBad); i++) {
             Log.e("MyAdapter", "--------RANK为:" + RANK[i] + "-------");
 
             final HashMap<String, Object> map = new HashMap<String, Object>();
-            map.put("ItemTitle",(activities[RANK[i]-2][0]) );
-            map.put("ItemText",(activities[RANK[i]-2][2]) );
+            map.put("ItemTitle", (activities[RANK[i] - 2][0]));
+            map.put("ItemText", (activities[RANK[i] - 2][2]));
             listItem_b.add(map);
-
         }
         ListView list_good = (ListView) findViewById(R.id.list_good);
         ListView list_bad = (ListView) findViewById(R.id.list_bad);
@@ -415,10 +395,8 @@ public class MainActivity extends AppCompatActivity {
                 //ImageItem的XML文件里面的两个TextView ID
                 new int[]{R.id.text1, R.id.text2}
         );
-
         //添加并且显示
         list_good.setAdapter(listItemAdapter_g);
         list_bad.setAdapter(listItemAdapter_b);
-    } }
-
-
+    }
+}

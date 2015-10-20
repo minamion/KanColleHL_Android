@@ -15194,13 +15194,14 @@ com.minamion.kancollehl_android.UpdateManager -> com.minamion.kancollehl_android
     android.os.Handler mHandler -> m
     void <init>(android.content.Context) -> <init>
     void checkUpdate() -> a
-    boolean isUpdate() -> b
+    void checkUpdate_onstart() -> b
+    boolean isUpdate() -> c
     int getVersionCode(android.content.Context) -> a
     java.lang.String getVersionName(android.content.Context) -> b
-    void showNoticeDialog() -> c
-    void showDownloadDialog() -> d
-    void downloadApk() -> e
-    void installApk() -> f
+    void showNoticeDialog() -> d
+    void showDownloadDialog() -> e
+    void downloadApk() -> f
+    void installApk() -> g
     int access$000(com.minamion.kancollehl_android.UpdateManager) -> a
     android.widget.ProgressBar access$100(com.minamion.kancollehl_android.UpdateManager) -> b
     void access$200(com.minamion.kancollehl_android.UpdateManager) -> c

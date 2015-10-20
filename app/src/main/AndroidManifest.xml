@@ -1,35 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.minamion.kancollehl_android"
-    android:versionCode="8"
-    android:versionName="试制乙型改三甲(0.2.3.1-Alpha)" >
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.minamion.kancollehl_android" android:versionCode="8"
+        android:versionName="试制乙型改三甲(0.2.3.1-Alpha)">
 
-    <application
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        <application
 
-        <activity
-            android:name=".Welcome"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:allowBackup="true" android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name" android:supportsRtl="true"
+            android:theme="@style/AppTheme">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            <activity android:name=".Welcome" android:label="@string/app_name"
+                android:theme="@style/AppTheme.NoActionBar">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
 
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
-    </application>
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+            </activity>
 
-</manifest>
+            <activity android:name=".MainActivity" android:label="@string/app_name"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+        </application>
+
+    </manifest>
