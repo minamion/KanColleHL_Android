@@ -9,5 +9,7 @@
     <string name="soft_update_cancel">取消更新</string>
     <string name="soft_update_no">未发现新版本</string>
     <string name="action_update">检查更新</string>
-    <string name="app_versionname">试制乙型改三甲</string>
+    <string name="Complete">已是最新版本</string>
+    <string name="Error">有可用更新</string>
+    <string name="Upload">检查更新</string>
 </resources>

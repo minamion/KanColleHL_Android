@@ -10,7 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="6dp"
         android:layout_marginTop="8dp"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/abc_text_size_title_material" />
 
     <TextView
         android:id="@+id/text2"
@@ -20,5 +21,6 @@
         android:layout_below="@android:id/text1"
         android:layout_marginLeft="6dp"
         android:layout_marginTop="8dp"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="@dimen/abc_text_size_small_material" />
 </LinearLayout>

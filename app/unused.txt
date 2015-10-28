@@ -180,27 +180,16 @@ android.support.design.widget.Snackbar:
     private static final int ANIMATION_FADE_DURATION
     private static final int MSG_SHOW
     private static final int MSG_DISMISS
-    private final android.content.Context mContext
-    private int mDuration
-    178:421:private Snackbar(android.view.ViewGroup)
-    209:212:public static android.support.design.widget.Snackbar make(android.view.View,java.lang.CharSequence,int)
     234:234:public static android.support.design.widget.Snackbar make(android.view.View,int,int)
-    238:262:private static android.view.ViewGroup findSuitableParent(android.view.View)
     273:273:public android.support.design.widget.Snackbar setAction(int,android.view.View$OnClickListener)
-    284:301:public android.support.design.widget.Snackbar setAction(java.lang.CharSequence,android.view.View$OnClickListener)
     310:312:public android.support.design.widget.Snackbar setActionTextColor(android.content.res.ColorStateList)
     321:323:public android.support.design.widget.Snackbar setActionTextColor(int)
-    333:335:public android.support.design.widget.Snackbar setText(java.lang.CharSequence)
     345:345:public android.support.design.widget.Snackbar setText(int)
-    357:358:public android.support.design.widget.Snackbar setDuration(int)
     368:368:public int getDuration()
     376:376:public android.view.View getView()
-    383:384:public void show()
     390:391:public void dismiss()
     402:403:public android.support.design.widget.Snackbar setCallback(android.support.design.widget.Snackbar$Callback)
     410:410:public boolean isShown()
-android.support.design.widget.Snackbar$2
-android.support.design.widget.Snackbar$3
 android.support.design.widget.Snackbar$Callback:
     public static final int DISMISS_EVENT_SWIPE
     public static final int DISMISS_EVENT_ACTION
@@ -214,11 +203,7 @@ android.support.design.widget.SnackbarManager:
     private static final int MSG_TIMEOUT
     private static final int SHORT_DURATION_MS
     private static final int LONG_DURATION_MS
-    71:100:public void show(int,android.support.design.widget.SnackbarManager$Callback)
     157:159:public boolean isCurrent(android.support.design.widget.SnackbarManager$Callback)
-android.support.design.widget.SnackbarManager$SnackbarRecord:
-    172:175:SnackbarManager$SnackbarRecord(int,android.support.design.widget.SnackbarManager$Callback)
-    168:168:static synthetic int access$102(android.support.design.widget.SnackbarManager$SnackbarRecord,int)
 android.support.design.widget.StateListAnimator:
     73:73:android.view.animation.Animation getRunningAnimation()
     159:159:java.util.ArrayList getTuples()
@@ -3479,7 +3464,6 @@ android.support.v7.app.ActionBar:
     public abstract void setDisplayOptions(int,int)
     public abstract void setDisplayUseLogoEnabled(boolean)
     public abstract void setDisplayShowHomeEnabled(boolean)
-    public abstract void setDisplayHomeAsUpEnabled(boolean)
     public abstract void setDisplayShowTitleEnabled(boolean)
     public abstract void setDisplayShowCustomEnabled(boolean)
     public abstract void setBackgroundDrawable(android.graphics.drawable.Drawable)
@@ -3569,10 +3553,12 @@ android.support.v7.app.AlertDialog:
     124:124:public android.widget.Button getButton(int)
     133:133:public android.widget.ListView getListView()
     146:147:public void setCustomTitle(android.view.View)
+    150:151:public void setMessage(java.lang.CharSequence)
     157:158:public void setView(android.view.View)
     172:173:public void setView(android.view.View,int,int,int,int)
     181:182:void setButtonPanelLayoutHint(int)
     195:196:public void setButton(int,java.lang.CharSequence,android.os.Message)
+    209:210:public void setButton(int,java.lang.CharSequence,android.content.DialogInterface$OnClickListener)
     219:220:public void setIcon(int)
     223:224:public void setIcon(android.graphics.drawable.Drawable)
     232:235:public void setIconAttribute(int)
@@ -3724,10 +3710,8 @@ android.support.v7.internal.app.ToolbarActionBar:
     242:243:public void setSubtitle(java.lang.CharSequence)
     247:248:public void setSubtitle(int)
     252:253:public void setDisplayOptions(int)
-    257:259:public void setDisplayOptions(int,int)
     263:264:public void setDisplayUseLogoEnabled(boolean)
     268:269:public void setDisplayShowHomeEnabled(boolean)
-    273:274:public void setDisplayHomeAsUpEnabled(boolean)
     278:279:public void setDisplayShowTitleEnabled(boolean)
     283:284:public void setDisplayShowCustomEnabled(boolean)
     288:289:public void setBackgroundDrawable(android.graphics.drawable.Drawable)
@@ -4653,7 +4637,37 @@ android.support.v7.widget.helper.ItemTouchUIUtilImpl$Gingerbread
 android.support.v7.widget.helper.ItemTouchUIUtilImpl$Honeycomb
 android.support.v7.widget.helper.ItemTouchUIUtilImpl$Lollipop
 android.support.v7.widget.util.SortedListAdapterCallback
+com.dd.CircularAnimatedDrawable:
+    private static final int ANGLE_ANIMATOR_DURATION
+    private static final int SWEEP_ANIMATOR_DURATION
+    public static final int MIN_SWEEP_ANGLE
+com.dd.CircularProgressButton:
+    public static final int IDLE_STATE_PROGRESS
+    public static final int ERROR_STATE_PROGRESS
+    public static final int SUCCESS_STATE_PROGRESS
+    public static final int INDETERMINATE_STATE_PROGRESS
+    275:275:public boolean isIndeterminateProgressMode()
+com.dd.MorphingAnimation:
+    public static final int DURATION_NORMAL
+    public static final int DURATION_INSTANT
+com.dd.circular.progress.button.BuildConfig
+com.dd.circular.progress.button.R:
+    9:57:public R()
+com.dd.circular.progress.button.R$attr
+com.dd.circular.progress.button.R$color:
+    26:26:public R$color()
+com.dd.circular.progress.button.R$dimen:
+    39:39:public R$dimen()
+com.dd.circular.progress.button.R$drawable:
+    42:42:public R$drawable()
+com.dd.circular.progress.button.R$string
+com.dd.circular.progress.button.R$styleable:
+    57:57:public R$styleable()
+com.minamion.kancollehl_android.Activity.Main:
+    private static final int check
 com.minamion.kancollehl_android.BuildConfig
+com.minamion.kancollehl_android.OnOpen.Welcome:
+    private static final int check
 com.minamion.kancollehl_android.R
 com.minamion.kancollehl_android.R$anim
 com.minamion.kancollehl_android.R$attr
@@ -4669,6 +4683,33 @@ com.minamion.kancollehl_android.R$mipmap
 com.minamion.kancollehl_android.R$string
 com.minamion.kancollehl_android.R$style
 com.minamion.kancollehl_android.R$styleable
-com.minamion.kancollehl_android.UpdateManager:
+com.minamion.kancollehl_android.Update.UpdateManager:
     private static final int DOWNLOAD
+    private static final int get
     private static final int DOWNLOAD_FINISH
+pl.tajchert.sample.DotsTextView:
+    private long startTime
+    private boolean lockDotOne
+    private boolean lockDotTwo
+    private boolean lockDotThree
+    192:192:public boolean isHide()
+    196:196:public boolean isPlaying()
+pl.tajchert.sample.JumpingSpan:
+    24:25:public void setTranslationX(float)
+    28:29:public void setTranslationY(float)
+pl.tajchert.waitingdots.BuildConfig
+pl.tajchert.waitingdots.R:
+    9:706:public R()
+pl.tajchert.waitingdots.R$anim
+pl.tajchert.waitingdots.R$attr
+pl.tajchert.waitingdots.R$bool
+pl.tajchert.waitingdots.R$color
+pl.tajchert.waitingdots.R$dimen
+pl.tajchert.waitingdots.R$drawable
+pl.tajchert.waitingdots.R$id
+pl.tajchert.waitingdots.R$integer
+pl.tajchert.waitingdots.R$layout
+pl.tajchert.waitingdots.R$string
+pl.tajchert.waitingdots.R$style
+pl.tajchert.waitingdots.R$styleable:
+    706:706:public R$styleable()
